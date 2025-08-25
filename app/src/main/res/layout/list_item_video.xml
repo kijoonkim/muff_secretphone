@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="videoModel"
+            type="com.muffinmanz.muff_secretphone.data.model.VideoListModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_content_info"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rect_solid_white_corner_05_stroke_1_lightgray"
+        android:onClick="@{clickListener}"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="@{videoModel.sectors}"
+            android:textColor="#000"
+            tools:text="건설업" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="@{videoModel.detailSectors}"
+            android:textColor="#000"
+            tools:text="목공" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="@{videoModel.offNumber}"
+            android:textColor="#000"
+            tools:text="E601" />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:textColor="#000"
+            tools:text="여자" />
+
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="@{videoModel.birth}"
+            android:textColor="#000"
+            tools:text="19810101" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center|start"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="@{videoModel.name}"
+            android:textColor="#000"
+            tools:text="Chinh Chanthay" />
+
+        <TextView
+            android:id="@+id/tv_v_check"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="완료" />
+    </LinearLayout>
+</layout>

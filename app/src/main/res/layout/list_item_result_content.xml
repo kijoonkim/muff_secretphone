@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="interViewer"
+            type="com.muffinmanz.muff_secretphone.data.model.VideoListModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rect_solid_white_corner_05_stroke_1_lightgray"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_user"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/a101" />
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/notosanscjkkrregular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@{interViewer.examNo}"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            tools:text="0082019C50700002" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/notosanscjkkrregular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@{interViewer.offNumber}"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            tools:text="A101" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/notosanscjkkrregular"
+            android:gravity="start|center"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:text="@{interViewer.name}"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            tools:text="Jack Daniel Hopi" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/notosanscjkkrregular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:text="@{interViewer.birth}"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            tools:text="19870710" />
+    </LinearLayout>
+</layout>

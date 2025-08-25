@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.download.DownloadFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guide_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.07" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guide_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guide_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guide_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guide_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guide_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#ffff"
+            app:layout_constraintBottom_toBottomOf="@id/h_guide_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#f7f7f7"
+            app:layout_constraintBottom_toBottomOf="@id/h_guide_4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/h_guide_1"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/gradient_start_white_end_gray_270"
+            app:layout_constraintTop_toTopOf="@id/h_guide_1"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#4A4A4A"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/h_guide_4"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/rect_solid_white_corners_3_stroke_1_lightgray"
+            app:layout_constraintBottom_toBottomOf="@id/h_guide_3"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_2"
+            app:layout_constraintStart_toStartOf="@id/v_guide_1"
+            app:layout_constraintTop_toTopOf="@id/h_guide_2"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/gradient_start_white_end_gray_270"
+            app:layout_constraintBottom_toBottomOf="@id/h_guide_4"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/ll_back_press"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/h_guide_1"
+            app:layout_constraintStart_toStartOf="@id/v_guide_1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_back_black"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/notosanscjkkrregular"
+                android:includeFontPadding="false"
+                android:text="@string/synchronization"
+                android:textColor="#000"
+                android:textSize="19sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_upload_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/notosanscjkkrbold"
+            android:gravity="center"
+            android:text="@string/download_in_progress"
+            android:textColor="#00435C"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_upload_content"
+            app:layout_constraintEnd_toEndOf="@id/iv_bg"
+            app:layout_constraintStart_toStartOf="@id/iv_bg"
+            app:layout_constraintTop_toTopOf="@id/iv_bg"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_upload_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="@string/plz_click_download_btn"
+            android:textColor="#afafaf"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/uploadProgress"
+            app:layout_constraintEnd_toEndOf="@id/iv_bg"
+            app:layout_constraintStart_toStartOf="@id/iv_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_upload_title" />
+
+        <ProgressBar
+            android:id="@+id/uploadProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="400dp"
+            android:layout_height="40dp"
+            android:max="100"
+            android:progress="0"
+            app:layout_constraintBottom_toBottomOf="@id/iv_bg"
+            app:layout_constraintEnd_toEndOf="@id/iv_bg"
+            app:layout_constraintStart_toStartOf="@id/iv_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_upload_content" />
+
+        <TextView
+            android:id="@+id/tv_result_info"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/notosanscjkkrregular"
+            android:gravity="center|top"
+            android:includeFontPadding="false"
+            android:text="@string/update_result"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_bg"
+            app:layout_constraintEnd_toEndOf="@id/iv_bg"
+            app:layout_constraintStart_toStartOf="@+id/iv_bg"
+            app:layout_constraintTop_toBottomOf="@id/uploadProgress" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_bottom"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/download"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_2"
+            app:layout_constraintStart_toStartOf="@id/v_guide_1"
+            app:layout_constraintTop_toTopOf="@id/h_guide_4"
+            app:rippleColor="@color/orange"
+            app:strokeColor="#178FB9"
+            app:strokeWidth="2dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

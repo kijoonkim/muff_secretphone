@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="interViewer"
+            type="com.muffinmanz.muff_secretphone.data.model.HomeListModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_content_info"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rect_solid_white_corner_05_stroke_1_lightgray"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="@{clickListener}"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_intervewer"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/a101" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:maxLines="2"
+            android:padding="5dp"
+            android:text="@{interViewer.sectors}"
+            android:textColor="#000"
+            tools:text="농축산업" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:padding="5dp"
+            android:text="@{interViewer.detailSectors}"
+            android:textColor="#000"
+            tools:text="목공" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="@{interViewer.offNumber}"
+            android:textColor="#000"
+            tools:text="E601" />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:textColor="#000"
+            tools:text="여자" />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="@{interViewer.birth}"
+            android:textColor="#000"
+            tools:text="19810101" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center|start"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="@{interViewer.name}"
+            android:textColor="#000"
+            tools:text="Chinh Chanthay" />
+
+        <TextView
+            android:id="@+id/tv_attend"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="응시" />
+    </LinearLayout>
+</layout>

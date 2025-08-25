@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.grader.GraderFragment">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.muffinmanz.muff_secretphone.ui.grader.GraderViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/header_bg_color"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:text="@string/login_hq"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/notosanscjkkrbold"
+                android:includeFontPadding="false"
+                android:background="@drawable/rounded_solid_darkgray_5dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="7dp"
+                android:lines="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/interview_video_shoot"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/notosanscjkkrbold"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:id="@+id/id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="110dp"
+                android:layout_gravity="center|end"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                tools:text="ID: B4" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="end|center"
+                android:background="@drawable/rect_solid_white_corners_1_stroke_2_lightdark"
+                android:lines="1"
+                android:paddingHorizontal="17dp"
+                android:text="@string/logout"
+                android:textColor="#252525"
+                android:textSize="18sp" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="15dp"
+            android:paddingHorizontal="20dp"
+            android:background="@drawable/rect_solid_gray_corners_1_stroke_2_gray">
+
+            <Spinner
+                android:id="@+id/spinner_v_check"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/rect_solid_white_corners_1_stroke_2_lightdark"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:fontFamily="@font/notosanscjkkrregular"
+                android:includeFontPadding="false"
+                android:lines="1" />
+
+            <Spinner
+                android:id="@+id/spinner_sectors"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/rect_solid_white_corners_1_stroke_2_lightdark"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:fontFamily="@font/notosanscjkkrregular"
+                android:includeFontPadding="false"
+                android:lines="1" />
+
+            <Spinner
+                android:id="@+id/spinner_details"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/rect_solid_white_corners_1_stroke_2_lightdark"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:fontFamily="@font/notosanscjkkrregular"
+                android:includeFontPadding="false"
+                android:lines="1" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_off_number_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:hint="@string/password_or_name"
+                android:lines="1"
+                android:inputType="text"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:background="@drawable/rect_solid_white_corners_1_stroke_2_lightdark"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="7dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_search"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:background="#137FD2"
+                android:foreground="?attr/selectableItemBackground"
+                android:fontFamily="@font/notosanscjkkrbold"
+                android:includeFontPadding="false"
+                android:text="@string/search"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/list_move_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:checked="true"
+            android:text="면접영상저장(단건) 시 목록 최하단으로 이동"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/notosanscjkkrbold"
+            android:includeFontPadding="false" />
+
+        <LinearLayout
+            android:id="@+id/ll_content_info"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="#616E74"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/sectors"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/details"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/temp_num"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/sex"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/birth"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/name"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/shooting"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_content_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="15dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="13" />
+
+        <Button
+            android:id="@+id/btn_video_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/interview_video_save"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/notosanscjkkrbold"
+            android:includeFontPadding="false"
+            android:backgroundTint="#003586" />
+    </LinearLayout>
+</layout>

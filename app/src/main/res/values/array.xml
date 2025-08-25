@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="s_item_1">
+        <item>업종</item>
+    </string-array>
+
+    <string-array name="s_item_2">
+        <item>세부분야</item>
+    </string-array>
+
+    <string-array name="s_item_3">
+        <item>촬영여부 전체</item>
+        <item>대기</item>
+        <item>촬영완료</item>
+    </string-array>
+    
+</resources>

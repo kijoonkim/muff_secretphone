@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.upload.UploadFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guide_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="30dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guide_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="30dp" />
+
+        <View
+            android:id="@+id/top_bg_view"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#57676D"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanscjkkrbold"
+            android:includeFontPadding="false"
+            android:text="최종 제출"
+            android:textColor="@android:color/white"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="@id/top_bg_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_top_info"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#91D0E6"
+            app:layout_constraintTop_toBottomOf="@id/top_bg_view">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/v_inner_guide_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.2" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/v_inner_guide_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.8" />
+
+            <TextView
+                android:id="@+id/tv_result_date"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="#57676D"
+                android:fontFamily="@font/notosanscjkkrregular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/date"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_division"
+                app:layout_constraintEnd_toStartOf="@id/tv_result_date_info"
+                app:layout_constraintStart_toStartOf="@id/v_inner_guide_1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tv_result_date_info"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:fontFamily="@font/notosanscjkkrbold"
+                android:gravity="center|start"
+                android:includeFontPadding="false"
+                android:paddingStart="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_division_info"
+                app:layout_constraintEnd_toEndOf="@id/v_inner_guide_2"
+                app:layout_constraintStart_toEndOf="@id/tv_result_date"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="2020-04-23" />
+
+            <TextView
+                android:id="@+id/tv_division"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="#57676D"
+                android:fontFamily="@font/notosanscjkkrregular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/login_division"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_grader"
+                app:layout_constraintEnd_toStartOf="@id/tv_result_date_info"
+                app:layout_constraintStart_toStartOf="@id/v_inner_guide_1"
+                app:layout_constraintTop_toBottomOf="@id/tv_result_date" />
+
+            <TextView
+                android:id="@+id/tv_division_info"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:fontFamily="@font/notosanscjkkrbold"
+                android:gravity="center|start"
+                android:includeFontPadding="false"
+                android:paddingStart="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_grader_info"
+                app:layout_constraintEnd_toEndOf="@id/v_inner_guide_2"
+                app:layout_constraintStart_toEndOf="@id/tv_division"
+                app:layout_constraintTop_toBottomOf="@id/tv_result_date_info"
+                tools:text="1차" />
+
+            <TextView
+                android:id="@+id/tv_grader"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="#57676D"
+                android:fontFamily="@font/notosanscjkkrregular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/scorer"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_ip"
+                app:layout_constraintEnd_toStartOf="@id/tv_result_date_info"
+                app:layout_constraintStart_toStartOf="@id/v_inner_guide_1"
+                app:layout_constraintTop_toBottomOf="@id/tv_division" />
+
+            <TextView
+                android:id="@+id/tv_grader_info"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:fontFamily="@font/notosanscjkkrbold"
+                android:gravity="center|start"
+                android:includeFontPadding="false"
+                android:paddingStart="10dp"
+                android:text="홍길동"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_ip_info"
+                app:layout_constraintEnd_toEndOf="@id/v_inner_guide_2"
+                app:layout_constraintStart_toEndOf="@id/tv_grader"
+                app:layout_constraintTop_toBottomOf="@id/tv_division_info" />
+
+            <TextView
+                android:id="@+id/tv_ip"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="#57676D"
+                android:fontFamily="@font/notosanscjkkrregular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="IP"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_result_date_info"
+                app:layout_constraintStart_toStartOf="@id/v_inner_guide_1"
+                app:layout_constraintTop_toBottomOf="@id/tv_grader" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tv_ip_info"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:fontFamily="@font/notosanscjkkrbold"
+                android:gravity="center|start"
+                android:includeFontPadding="false"
+                android:paddingStart="10dp"
+                android:text="http://192.168.0.201:8090/"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/v_inner_guide_2"
+                app:layout_constraintStart_toEndOf="@id/tv_grader"
+                app:layout_constraintTop_toBottomOf="@id/tv_grader_info" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#57676D"
+                app:layout_constraintEnd_toEndOf="@id/v_inner_guide_2"
+                app:layout_constraintStart_toStartOf="@id/v_inner_guide_1"
+                app:layout_constraintTop_toTopOf="@id/tv_result_date"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#57676D"
+                app:layout_constraintEnd_toEndOf="@id/v_inner_guide_2"
+                app:layout_constraintStart_toStartOf="@id/v_inner_guide_1"
+                app:layout_constraintTop_toTopOf="@id/tv_division"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#57676D"
+                app:layout_constraintEnd_toEndOf="@id/v_inner_guide_2"
+                app:layout_constraintStart_toStartOf="@id/v_inner_guide_1"
+                app:layout_constraintTop_toTopOf="@id/tv_grader"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#57676D"
+                app:layout_constraintBottom_toBottomOf="@id/tv_grader"
+                app:layout_constraintEnd_toEndOf="@id/v_inner_guide_2"
+                app:layout_constraintStart_toStartOf="@id/v_inner_guide_1"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="#57676D"
+                app:layout_constraintBottom_toBottomOf="@id/tv_grader_info"
+                app:layout_constraintEnd_toEndOf="@id/v_inner_guide_2"
+                app:layout_constraintTop_toTopOf="@id/tv_result_date_info"
+                tools:ignore="ContentDescription" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_history_info"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/notosanscjkkrbold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/submit_history"
+            android:textColor="#FF8326"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/v_guide_1"
+            app:layout_constraintTop_toBottomOf="@id/cl_top_info" />
+
+        <TextView
+            android:id="@+id/tv_result_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/notosanscjkkrlight"
+            android:includeFontPadding="false"
+            android:text="@string/apply_exam"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_history_info"
+            app:layout_constraintEnd_toStartOf="@id/tv_result_total_info"
+            app:layout_constraintTop_toTopOf="@id/tv_history_info" />
+
+        <TextView
+            android:id="@+id/tv_result_total_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanscjkkrbold"
+            android:includeFontPadding="false"
+            android:textColor="#00435C"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_history_info"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_2"
+            app:layout_constraintTop_toTopOf="@id/tv_history_info"
+            tools:text="15명" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/b_barrier_total_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:barrierMargin="20dp"
+            app:constraint_referenced_ids="tv_history_info, tv_result_total, tv_result_total_info" />
+
+        <LinearLayout
+            android:id="@+id/ll_user_info"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="#57676D"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_2"
+            app:layout_constraintStart_toStartOf="@id/v_guide_1"
+            app:layout_constraintTop_toTopOf="@id/b_barrier_total_info">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/notosanscjkkrregular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/picture"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/notosanscjkkrregular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/apply_number"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/notosanscjkkrregular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/temp_num"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/notosanscjkkrregular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/name"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/notosanscjkkrregular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/birth"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_result_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/view_bottom_info"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_2"
+            app:layout_constraintStart_toStartOf="@id/v_guide_1"
+            app:layout_constraintTop_toBottomOf="@id/ll_user_info" />
+
+        <View
+            android:id="@+id/view_bottom_info"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#252525"
+            app:layout_constraintBottom_toBottomOf="@id/b_barrier_bottom_btn" />
+
+        <TextView
+            android:id="@+id/tv_result_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/notosanscjkkrregular"
+            android:includeFontPadding="false"
+            android:text="@string/date_submit_answer"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/view_bottom_info"
+            app:layout_constraintEnd_toStartOf="@id/tv_result_clock_info"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/v_guide_1"
+            app:layout_constraintTop_toTopOf="@id/view_bottom_info" />
+
+        <TextClock
+            android:id="@+id/tv_result_clock_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanscjkkrbold"
+            android:format12Hour="yyyy년 MM월 dd일 HH시 mm분 ss초"
+            android:includeFontPadding="false"
+            android:paddingStart="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/view_bottom_info"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_2"
+            app:layout_constraintStart_toEndOf="@id/tv_result_clock"
+            app:layout_constraintTop_toTopOf="@id/view_bottom_info"
+            tools:ignore="RtlSymmetry"
+            tools:text="2020년 4월 20일 16시 55분 23초" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/b_barrier_bottom_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top"
+            app:barrierMargin="-10dp"
+            app:constraint_referenced_ids="btn_cancel, btn_submit" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rect_solid_gray_corners_2_stroke_1_gray"
+            android:fontFamily="@font/notosanscjkkrbold"
+            android:includeFontPadding="false"
+            android:text="@string/cancle"
+            android:textColor="#898989"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_submit"
+            app:layout_constraintHorizontal_weight="0.3"
+            app:layout_constraintStart_toStartOf="@id/v_guide_1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rect_solid_sky_corners_2_stroke_1_gray"
+            android:fontFamily="@font/notosanscjkkrbold"
+            android:includeFontPadding="false"
+            android:text="@string/result_summit"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_2"
+            app:layout_constraintHorizontal_weight="0.7"
+            app:layout_constraintStart_toEndOf="@id/btn_cancel" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.login.LoginFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_background">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guide_outline_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guide_outline_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.98" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guide_outline_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guide_outline_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guide_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guide_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guide_login_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.71" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guide_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guide_login_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.79" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_guide_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.92" />
+
+        <ImageView
+            android:id="@+id/iv_slide"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <FrameLayout
+            android:id="@+id/fl_examination_division"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:background="#003586"
+            app:layout_constraintBottom_toTopOf="@id/tv_login_title"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_outline_2"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/v_guide_outline_1"
+            app:layout_constraintTop_toTopOf="@id/h_guide_outline_1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/notosanscjkkrbold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp"
+                android:text="시험본부"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_login_title"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/notosanscjkkrbold"
+            android:gravity="center|start"
+            android:includeFontPadding="false"
+            android:textColor="#ffff"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@id/h_guide_1"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_outline_2"
+            app:layout_constraintStart_toStartOf="@id/v_guide_outline_1"
+            app:layout_constraintTop_toBottomOf="@id/fl_examination_division" />
+
+        <FrameLayout
+            android:id="@+id/fl_examination_period"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/v_guide_outline_1"
+            app:layout_constraintTop_toBottomOf="@id/tv_login_title">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_tme_dts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="세부회자: "
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/notosanscjkkrbold"
+                    android:includeFontPadding="false"
+                    android:background="@drawable/rounded_solid_darkgray_5dp"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="7dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/notosanscjkkrregular"
+                    android:includeFontPadding="false"
+                    android:text="시행일정: "
+                    android:textColor="@color/gray"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosanscjkkrbold"
+                    android:lines="1"
+                    android:textColor="#1d586e"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_exam_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/date_info_card"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_outline_2"
+            app:layout_constraintStart_toStartOf="@id/v_guide_outline_1"
+            app:layout_constraintTop_toTopOf="@id/h_guide_2"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanscjkkrbold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="| 시험정보"
+                android:textColor="#533711"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/date_info_card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rect_solid_white_corners_10_stroke_1_lightgray"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/ll_login_title"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_outline_2"
+            app:layout_constraintStart_toStartOf="@id/v_guide_outline_1"
+            app:layout_constraintTop_toBottomOf="@id/ll_exam_info"
+            tools:ignore="DisableBaselineAlignment">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanscjkkrregular"
+                        android:includeFontPadding="false"
+                        android:width="250dp"
+                        android:text="날짜"
+                        android:textColor="@color/gray"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanscjkkrregular"
+                        android:includeFontPadding="false"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="세션"
+                        android:textColor="@color/gray"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_selec_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/notosanscjkkrregular"
+                        android:hint="시행일 선택"
+                        android:includeFontPadding="false"
+                        android:width="250dp"
+                        android:singleLine="true"
+                        android:textSize="24sp"
+                        android:textColor="#0070BF" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_selec_am_pm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_selec_am"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="am"
+                            android:layout_gravity="center"
+                            android:textSize="24sp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_selec_pm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="pm"
+                            android:layout_gravity="center"
+                            android:textSize="24sp" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/oval_solid_darkblue_stroke_1_dark_sky"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/notosanscjkkrbold"
+                    android:includeFontPadding="false"
+                    android:text="구분"
+                    android:textColor="#ffff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_tme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/notosanscjkkrbold"
+                    android:includeFontPadding="false"
+                    android:textColor="#ffff"
+                    android:textSize="25sp"
+                    tools:text="1차" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_login_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/login_info_card"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_outline_2"
+            app:layout_constraintStart_toStartOf="@id/v_guide_outline_1"
+            app:layout_constraintTop_toBottomOf="@id/date_info_card"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanscjkkrbold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="| 로그인"
+                android:textColor="#533711"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_info_card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/rect_solid_white_corners_10_stroke_1_lightgray"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/h_guide_3"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_outline_2"
+            app:layout_constraintStart_toStartOf="@id/v_guide_outline_1"
+            app:layout_constraintTop_toBottomOf="@id/ll_login_title">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center|top"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/rect_solid_graywhite_corners_null_stroke_1_graywhite">
+
+                <EditText
+                    android:id="@+id/et_login_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:fontFamily="@font/notosanscjkkrregular"
+                    android:gravity="center"
+                    android:hint="아이디 입력"
+                    android:includeFontPadding="false"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textSize="24sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center|top"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/rect_solid_graywhite_corners_null_stroke_1_graywhite">
+
+                <EditText
+                    android:id="@+id/et_login_pw"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:fontFamily="@font/notosanscjkkrregular"
+                    android:gravity="center"
+                    android:hint="패스워드 입력"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textSize="24sp" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            android:layout_width="210dp"
+            android:layout_height="75dp"
+            android:background="@drawable/rounded_solid_lightblue_stroke_5dp_white"
+            android:fontFamily="@font/notosanscjkkrbold"
+            android:lines="1"
+            android:text="로그인"
+            android:textColor="#fff"
+            app:autoSizeMaxTextSize="35sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@id/h_guide_login_2"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_outline_2"
+            app:layout_constraintStart_toStartOf="@id/v_guide_outline_1"
+            app:layout_constraintTop_toTopOf="@id/h_guide_login_1" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/h_guide_outline_2"
+            app:layout_constraintEnd_toEndOf="@id/v_guide_outline_2"
+            app:layout_constraintStart_toStartOf="@id/v_guide_outline_1"
+            app:layout_constraintTop_toTopOf="@id/h_guide_4">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_inner_guide_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <ImageView
+                android:id="@+id/iv_refer_version"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_refer"
+                app:layout_constraintBottom_toBottomOf="@id/h_inner_guide_1"
+                app:layout_constraintEnd_toStartOf="@id/tv_refer_version"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_refer_version"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="@font/notosanscjkkrlight"
+                android:gravity="start|center"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:text="Ver."
+                android:textColor="#898989"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@id/h_inner_guide_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_refer_version"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_text_version"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="@font/notosanscjkkrregular"
+                android:gravity="start|center"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:textColor="#505050"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@id/h_inner_guide_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_text_trial"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1.2.2" />
+
+            <ImageView
+                android:id="@+id/iv_refer_trial"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_refer"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_refer_version"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/h_inner_guide_1"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_refer_trial"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:fontFamily="@font/notosanscjkkrlight"
+                android:gravity="start|center"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:text="시행파일"
+                android:textColor="#898989"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_text_trial"
+                app:layout_constraintStart_toEndOf="@id/iv_refer_trial"
+                app:layout_constraintTop_toTopOf="@id/h_inner_guide_1" />
+
+            <TextView
+                android:id="@+id/tv_text_trial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/notosanscjkkrregular"
+                android:gravity="start|center"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:textColor="#505050"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_refer_trial"
+                app:layout_constraintTop_toTopOf="@id/h_inner_guide_1"
+                tools:text="20200420001" />
+
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ci_hrdk"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

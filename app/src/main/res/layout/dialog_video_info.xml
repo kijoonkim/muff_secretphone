@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="interViewer"
+            type="com.muffinmanz.muff_secretphone.data.model.VideoListModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="450dp"
+            android:layout_height="600dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rect_solid_white_corner_05_stroke_1_lightgray">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/header_bg_color"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingVertical="15dp"
+                android:text="@string/interview_video_shoot"
+                android:textColor="@color/white"
+                android:textSize="21.5sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_user"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@id/tv_korea_exam_num"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title"
+                tools:src="@drawable/a101" />
+
+            <TextView
+                android:id="@+id/tv_off_number"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:background="#57676D"
+                android:gravity="start|center"
+                android:padding="5dp"
+                android:text="@string/temp_num"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_off_number_info"
+                app:layout_constraintEnd_toStartOf="@id/tv_off_number_info"
+                app:layout_constraintStart_toEndOf="@id/iv_user"
+                app:layout_constraintTop_toBottomOf="@id/tv_title"
+                tools:text="비번호" />
+
+            <TextView
+                android:id="@+id/tv_off_number_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center|start"
+                android:padding="5dp"
+                android:text="@{interViewer.offNumber}"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_off_number"
+                app:layout_constraintTop_toBottomOf="@id/tv_title"
+                tools:text="A101" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#57676D"
+                android:gravity="start|center"
+                android:padding="5dp"
+                android:text="@string/name"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_name_info"
+                app:layout_constraintEnd_toStartOf="@id/tv_name_info"
+                app:layout_constraintStart_toEndOf="@id/iv_user"
+                app:layout_constraintTop_toBottomOf="@id/tv_off_number" />
+
+            <TextView
+                android:id="@+id/tv_name_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:padding="5dp"
+                android:text="@{interViewer.name}"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_off_number_info"
+                tools:text="Chinh Chantay Chath" />
+
+            <TextView
+                android:id="@+id/tv_korea_exam_num"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#57676D"
+                android:gravity="start|center"
+                android:padding="5dp"
+                android:text="@string/korea_exam_num"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_korea_exam_num_info"
+                app:layout_constraintEnd_toStartOf="@id/tv_korea_exam_num_info"
+                app:layout_constraintStart_toEndOf="@id/iv_user"
+                app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+            <TextView
+                android:id="@+id/tv_korea_exam_num_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:padding="5dp"
+                android:text="@{interViewer.examNo}"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_korea_exam_num"
+                app:layout_constraintTop_toBottomOf="@id/tv_name_info"
+                tools:text="0082C114535" />
+
+            <com.google.android.exoplayer2.ui.StyledPlayerView
+                android:id="@+id/player_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintBottom_toBottomOf="@id/b_shoot_top"
+                app:layout_constraintTop_toBottomOf="@id/tv_korea_exam_num_info"
+                app:show_buffering="when_playing"
+                app:show_shuffle_button="true"
+                app:show_subtitle_button="true" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/b_shoot_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="top"
+                app:barrierMargin="-5dp"
+                app:constraint_referenced_ids="btn_re_shoot, btn_confirm" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_re_shoot"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/rect_solid_indigo_corners_4_stroke_03_indigo"
+                android:text="@string/reshoot"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn_confirm"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_confirm"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/rect_solid_sky_corners_3_stroke_1_sky"
+                android:text="@string/confirm"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_re_shoot" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

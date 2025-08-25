@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="homeModel"
+            type="com.muffinmanz.muff_secretphone.data.model.HomeListModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="550dp"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_color"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            tools:ignore="UselessParent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/black"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="10dp">
+
+                <TextView
+                    android:id="@+id/tv_title_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{homeModel.offNumber}"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/notosanscjkkrbold"
+                    android:includeFontPadding="false"
+                    android:layout_centerInParent="true"
+                    tools:text="E602" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_close"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_close_white" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#AEAEAE" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingHorizontal="25dp"
+                android:paddingVertical="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_user"
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        tools:src="@drawable/a101" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/solid_white_stroke_1dp_gray">
+
+                            <TextView
+                                android:id="@+id/tv_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/solid_darkblue_stroke_1dp_gray"
+                                android:gravity="start|center"
+                                android:padding="10dp"
+                                android:text="@string/name"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tv_name_info"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="start|center"
+                                android:padding="10dp"
+                                android:text="@{homeModel.name}"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                tools:text="CAHYANINGTYAS PUTRI DIKA MARGARETA" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/solid_white_stroke_1dp_gray">
+
+                            <TextView
+                                android:id="@+id/tv_birth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/solid_darkblue_stroke_1dp_gray"
+                                android:gravity="start|center"
+                                android:padding="10dp"
+                                android:text="@string/birth"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tv_birth_info"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="start|center"
+                                android:padding="10dp"
+                                android:text="@{homeModel.birth}"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                tools:text="1998.06.20" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/solid_white_stroke_1dp_gray">
+
+                            <TextView
+                                android:id="@+id/tv_birth_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/solid_darkblue_stroke_1dp_gray"
+                                android:gravity="start|center"
+                                android:padding="10dp"
+                                android:text="@string/birth_id_num"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tv_birth_id_info"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="start|center"
+                                android:padding="10dp"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                tools:text="810101-1105871" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/solid_white_stroke_1dp_gray">
+
+                            <TextView
+                                android:id="@+id/tv_gender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/solid_darkblue_stroke_1dp_gray"
+                                android:gravity="start|center"
+                                android:padding="10dp"
+                                android:text="@string/sex"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_gender_info"
+                                    android:layout_width="0dp"
+                                    android:layout_height="43dp"
+                                    android:layout_weight="1"
+                                    android:gravity="start|center"
+                                    android:layout_gravity="center"
+                                    android:paddingHorizontal="10dp"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    tools:text="여자" />
+
+                                <Button
+                                    android:id="@+id/btn_gender_chg"
+                                    android:layout_width="55dp"
+                                    android:layout_height="match_parent"
+                                    android:text="변경"
+                                    android:textSize="15sp"
+                                    android:paddingHorizontal="-10dp"
+                                    android:layout_marginRight="6dp"
+                                    android:backgroundTint="#0070BF" />
+                            </LinearLayout>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/solid_white_stroke_1dp_gray">
+
+                            <TextView
+                                android:id="@+id/tv_korea_exam_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/solid_darkblue_stroke_1dp_gray"
+                                android:gravity="start|center"
+                                android:padding="10dp"
+                                android:text="@string/korea_exam_num"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tv_korea_exam_num_info"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="start|center"
+                                android:padding="10dp"
+                                android:text="@{homeModel.examNo}"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                tools:text="0152021C51010282" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/solid_white_stroke_1dp_gray">
+
+                            <TextView
+                                android:id="@+id/tv_skill_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/solid_darkblue_stroke_1dp_gray"
+                                android:gravity="start|center"
+                                android:padding="10dp"
+                                android:text="@string/function_test_number"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tv_skill_num_info"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="start|center"
+                                android:padding="10dp"
+                                android:text="@{homeModel.skillNum}"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                tools:text="20181208220610" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_sector"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/solid_darkblue_stroke_1dp_gray"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@string/sectors"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tv_sector_detail"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/solid_darkblue_stroke_1dp_gray"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@string/details"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/tv_off_number"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/solid_darkblue_stroke_1dp_gray"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@string/temp_num"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_sector_info"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/solid_white_stroke_1dp_gray"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@{homeModel.sectors}"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            tools:text="제조업" />
+
+                        <TextView
+                            android:id="@+id/tv_sector_detail_info"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/solid_white_stroke_1dp_gray"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@{homeModel.detailSectors}"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            tools:text="이음 접합" />
+
+                        <TextView
+                            android:id="@+id/tv_off_number_info"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/solid_white_stroke_1dp_gray"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="@{homeModel.offNumber}"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            tools:text="A001" />
+                    </TableRow>
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp">
+
+                    <Button
+                        android:id="@+id/btn_prev"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:text="이전"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        android:backgroundTint="#D8D8D8"
+                        android:drawableLeft="@drawable/ic_triangle_left_black" />
+
+                    <Button
+                        android:id="@+id/btn_examination"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:text="응시"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="#0070BF" />
+
+                    <Button
+                        android:id="@+id/btn_absent"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:text="결시"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="#FE0000" />
+
+                    <Button
+                        android:id="@+id/btn_reset"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:text="초기화"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="#404040" />
+
+                    <Button
+                        android:id="@+id/btn_next"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:text="다음"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        android:backgroundTint="#D8D8D8"
+                        android:drawableRight="@drawable/ic_triangle_right_black" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</layout>
