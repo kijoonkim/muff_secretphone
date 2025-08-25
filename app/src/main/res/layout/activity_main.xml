@@ -43,7 +43,7 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/loading_ubt" />
+                    android:src="@drawable/loading_m" />
 
                 <TextView
                     android:layout_width="wrap_content"

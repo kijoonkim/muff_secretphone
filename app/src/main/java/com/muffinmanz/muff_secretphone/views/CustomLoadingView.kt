@@ -14,7 +14,7 @@ class CustomLoadingView(context: Context, attrs: AttributeSet) : AppCompatImageV
   private val modelInAnim: Animation get() = AnimationUtils.loadAnimation(context, R.anim.modal_in)
 
   init {
-    Glide.with(this).load(R.drawable.loading_ubt).into(this)
+    Glide.with(this).load(R.drawable.loading_m).into(this)
   }
 
   override fun onVisibilityChanged(changedView: View, visibility: Int) {
